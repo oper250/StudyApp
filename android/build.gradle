@@ -1,5 +1,5 @@
 // tools를 찾지 못하는 오류가 있어 주석 처리함. 추후 해결해야 함
-// import org.apache.tools.ant.taskdefs.condition.Os
+import org.apache.tools.ant.taskdefs.condition.Os
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
@@ -33,6 +33,16 @@ buildscript {
 
 allprojects {
     repositories {
+        exclusiveContent {
+            filter {
+                includeGroup "com.facebook.react"
+            }
+            forRepository {
+                maven {
+                    url "$rootDir/../node_modules/react-native/android"
+                }
+            }
+        }
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url("$rootDir/../node_modules/react-native/android")

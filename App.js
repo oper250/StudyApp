@@ -19,6 +19,7 @@ function App() {
                   component={JDevsMain}
                   options={{
                       title: '정식홈',
+                      unmountOnBlur: true,
                       tabBarIcon: ({color, size}) => (
                           <Icon name="home" color={color} size={size} />
                       ),
@@ -29,6 +30,7 @@ function App() {
                   component={MooratoMain}
                   options={{
                       title: '동우쓰',
+                      unmountOnBlur: true,
                       tabBarIcon: ({color, size}) => (
                           <Icon name="home" color={color} size={30} />
                       ),
@@ -40,6 +42,7 @@ function App() {
                   component={Chris}
                   options={{
                       title: '양재홈',
+                      unmountOnBlur: true,
                       tabBarIcon: ({color, size}) => (
                           <Icon name="home" color={color} size={size} />
                       ),
